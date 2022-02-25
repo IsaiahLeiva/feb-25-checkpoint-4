@@ -15,7 +15,7 @@ export class TasksController {
             name: form.taskname.value
         }
         console.log(event.target.parentNode)
-        event.target.parentNode.innerHTML += `<div class = 'testing'></div>`
+        event.target.parentNode.innerHTML += `<div class='testing'></div>`
         console.log("[TaskController]: createTask", newTask)
         tasksService.createTask(newTask)
     }
