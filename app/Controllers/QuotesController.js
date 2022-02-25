@@ -19,5 +19,4 @@ export class QuotesController {
         quotesService.addQuote()
     }
 
-
 }
