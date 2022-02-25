@@ -1,4 +1,4 @@
-import Quote from "../Models/Quote";
+import Quote from "../Models/Quote.js";
 
 
 class QuotesService {
