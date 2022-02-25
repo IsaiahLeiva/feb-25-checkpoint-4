@@ -1,3 +1,4 @@
+import { todoTasksService } from "../Services/TodosService";
 
 
 
@@ -19,5 +20,9 @@ export class todotaskController {
         todosService.createTodoTask(newTodo)
     }
 
-    //TODO: add async deleteTodo
+    async deleteTask(id) {
+        if (await Pop.confirm()) {
+            todoTasksService.deletetodoTask(id)
+        }
+    }
 }
