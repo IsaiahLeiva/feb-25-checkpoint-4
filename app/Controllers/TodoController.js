@@ -1,7 +1,7 @@
 
 
 
-export class todoController {
+export class todotaskController {
     createTodoTask(taskID) {
         console.log('creating todo task');
         console.log(taskID.target);
