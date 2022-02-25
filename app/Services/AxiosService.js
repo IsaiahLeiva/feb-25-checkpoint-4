@@ -1,5 +1,5 @@
-export const futuramaquoteApi = axios.create({
-    baseURL: 'futuramaapi.herokuapp.com/api/quotes',
+export const quoteApi = axios.create({
+    baseURL: 'https://bcw-sandbox.herokuapp.com/api/quotes',
     timeout: 5000
 })
 
