@@ -12,6 +12,7 @@ export class QuotesController {
     constructor() {
         console.log('[Quotes Controller]');
         ProxyState.on('quote', _drawQuote)
+        _draw()
     }
 
     addQuote() {
