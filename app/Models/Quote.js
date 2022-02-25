@@ -4,8 +4,7 @@ import { generateId } from "../Utils/generateId.js";
 export default class Quote {
     constructor(data) {
         this.id = generateId()
-        this.character = data.character || data.character;
-        this.quote = data.quote || data.quote
+        this.author = data.author
     }
 
     get ActiveQuote() {
