@@ -6,11 +6,11 @@ class todotasksService {
         ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
     }
     createTask(newTask) {
-        const task = new todoTask(newtodoTask)
+        const task = new Task(newTask)
         ProxyState.tasks = [...ProxyState.tasks, task]
         console.log(ProxyState.tasks)
     }
 
 }
 
-export const todoTasksService = new todoTasksService()
+export const tasksService = new TasksService()
