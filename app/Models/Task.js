@@ -1,3 +1,4 @@
+import { generateId } from "../Utils/generateId"
 
 
 
@@ -8,7 +9,6 @@ export class Task {
         this.name = data.name
         this.checkbox = data.checkbox || true
         this.listId = data.listId
-
     }
 
     get Template() {
