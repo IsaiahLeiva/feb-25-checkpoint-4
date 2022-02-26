@@ -16,7 +16,6 @@ export class Task {
         <input type="checkbox" name="list item checkbox" id=""><li class="d-flex justify-content-between">${this.name} <i class="mdi mdi-delete selectable" title="Delete ${this.name}" onclick="app.tasksController.deleteTask('${this.id}')"></i></li>
         </div>
         `
-
     }
 
 }
