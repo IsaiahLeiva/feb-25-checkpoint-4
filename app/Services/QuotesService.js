@@ -1,9 +1,11 @@
 import Quote from "../Models/Quote.js";
+import { quoteApi } from "./AxiosService.js";
 
 
 class QuotesService {
     async getQuote() {
-        ProxyState.quotes = [...ProxyState.quotes, new Quote({ quote: Math.random() })]
+        const res = await quoteApi.get()
+        console.log(res.data);
     }
 
 

@@ -1,3 +1,4 @@
+import { ProxyState } from "../AppState.js";
 import { quotesService } from "../Services/QuotesService.js";
 
 
@@ -11,12 +12,18 @@ function _drawQuote() {
 export class QuotesController {
     constructor() {
         console.log('[Quotes Controller]');
-        ProxyState.on('quote', _drawQuote)
-        _draw()
+        ProxyState.on('quotes', _drawQuote)
+        _drawQuote()
     }
 
-    addQuote() {
-        quotesService.addQuote()
+    async addQuote() {
+        try {
+            await quotesService.addQuote()
+        } catch (error) {
+            console.error(error);
+        }
     }
+
+
 
 }
