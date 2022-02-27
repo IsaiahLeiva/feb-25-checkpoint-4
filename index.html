@@ -14,6 +14,7 @@
 </head>
 
 <body id="bg-image">
+  <div id="images"></div>
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
@@ -29,20 +30,20 @@
         <div class="col-12">
           <div id="app">
           </div>
-          <div id="quotes" class="position-absolute bottom-90 start-50 translate-middle-x">
+          <div id="quotes" class="position-absolute bottom-90 start-50 translate-middle-x text-light">
           </div>
           <div>
-            <h2>To-Do:</h2>
+            <h2 class="text-light">To-Do:</h2>
           </div>
-          <div id="todo-list">
+          <div id="todo-list" class="text-light">
             Task
           </div>
-          <form onsubmit="app.tasksController.createTask()">
+          <form class="text-light" onsubmit="app.tasksController.createTask()">
             <input type="text" id="name" value="" name="name">
             <Button type="submit">Create Task</Button>
           </form>
-          <div id="clock" class="text-center"></div>
-          <div id="weather" class="text-end align-text-top"></div>
+          <div id="clock" class="text-center text-light"></div>
+          <div id="weather" class="text-end align-text-top text-light"></div>
         </div>
       </div>
     </div>
