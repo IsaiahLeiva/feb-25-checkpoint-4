@@ -21,7 +21,8 @@ class TasksService {
     async getTasks() {
         const res = await todosApi.get()
         console.log('[getTasks]', res.data);
-        ProxyState.tasks = [res.data.results, ...ProxyState.tasks]
+        //NOTE: go over map
+        ProxyState.tasks = res.data.map(t => new Task(t))
     }
 
 }
