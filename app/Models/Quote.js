@@ -15,3 +15,5 @@ export class Quote {
         `
     }
 }
+
+//NOTE: Jeopardy in style modify classes/Questions template
