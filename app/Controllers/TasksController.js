@@ -3,26 +3,23 @@ import { Pop } from "../Utils/Pop.js"
 
 
 export class TasksController {
-    createTask(TaskID, event) {
-        console.log('creating a task');
-        console.log(event.target)
-        window.event.preventDefault()
-
-        const form = window.event.target
-
-        const newTask = {
-            TaskID,
-            name: form.taskname.value
-        }
-        console.log(event.target.parentNode)
-        event.target.parentNode.innerHTML += `<div class='testing'></div>`
-        console.log("[TaskController]: createTask", newTask)
-        tasksService.createTask(newTask)
+    constructor() {
+        console.log("hello");
     }
 
-    async deleteTask(id) {
-        if (await Pop.confirm()) {
-            tasksService.deleteTask(id)
+    async createTask() {
+        try {
+            window.event.preventDefault()
+            let form = window.event.target
+            let taskData = {
+                description: form.name.value
+            }
+            tasksService.createTask(taskData)
+        } catch (error) {
+            console.error(error);
         }
     }
+
 }
+
+

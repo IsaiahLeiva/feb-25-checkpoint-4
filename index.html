@@ -32,8 +32,16 @@
           <!-- //ANCHOR - Find out what we're missing to be able to write the quotes. -->
           <div id="quotes">
           </div>
-          <div id="todo-list">
+          <div>
+            <h2>To-Do:</h2>
           </div>
+          <div id="todo-list">
+            Task
+          </div>
+          <form onsubmit="app.tasksController.createTask()">
+            <input type="text" id="name" value="" name="name">
+            <Button type="submit">Create Task</Button>
+          </form>
           <div id="clock"></div>
           <div id="weather"></div>
         </div>
