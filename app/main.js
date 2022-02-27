@@ -8,6 +8,7 @@ class App {
   clockController = new ClockController()
   quotesController = new QuotesController()
   weatherController = new WeatherController()
+  backgroundController = new BackgroundController()
 }
 
 window["app"] = new App();
