@@ -11,7 +11,7 @@ export class Quote {
     get Template() {
         return `
         <h3 class="fst-italic">${this.author}</h3>
-        <p>"${this.content}"</p>
+        <p class="hovertext">"${this.content}"</p>
         `
     }
 }
