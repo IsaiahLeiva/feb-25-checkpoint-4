@@ -37,7 +37,11 @@ export class TasksController {
         }
     }
 
-
+    async deleteTask(id) {
+        if (await Pop.confirm()) {
+            tasksService.deleteTask(id)
+        }
+    }
 }
 
 
