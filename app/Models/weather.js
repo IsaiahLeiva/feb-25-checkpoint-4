@@ -3,14 +3,15 @@
 export class weather {
     constructor(data) {
         this.temperature = data.main.temp
-        this.toggle = false
+        this.toggle = true
     }
 
     get Template() {
         return `
-        <h1 class="">${this.temperature}</h1>
-        <li>${this.Fahrenheit}</li>
-        <li>${this.Celsius}</li>
+        <h1 class="">${this.toggle ? this.Fahrenheit : this.Celsius}</h1>
+        <li>Fahrenheit: ${this.Fahrenheit}</li>
+        <li>Celsius: ${this.Celsius}</li>
+        <button onclick="app.weatherController.changeTemperature()">Change Temperature</button>
         `
     }
 
@@ -34,5 +35,5 @@ export class weather {
 // ℃=K-273.15	
 
 //NOTE: ternary operator: 
-condition ? iftrue : iffalse
+// condition ? iftrue : iffalse
 

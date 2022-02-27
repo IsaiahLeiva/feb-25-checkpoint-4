@@ -21,4 +21,9 @@ export class WeatherController {
         }
     }
 
+    changeTemperature() {
+        console.log("button clicked");
+        weatherService.changeTemperature()
+    }
+
 }

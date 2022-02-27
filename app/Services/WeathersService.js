@@ -11,6 +11,11 @@ export class WeatherService {
         ProxyState.weather = ProxyState.weather
         console.log(ProxyState.weather);
     }
+
+    changeTemperature() {
+        ProxyState.weather.toggle = !ProxyState.weather.toggle
+        ProxyState.weather = ProxyState.weather
+    }
 }
 
 export const weatherService = new WeatherService();
