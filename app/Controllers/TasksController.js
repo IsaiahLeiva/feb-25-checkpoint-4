@@ -42,6 +42,15 @@ export class TasksController {
             tasksService.deleteTask(id)
         }
     }
+
+    async taskDone(id) {
+        try {
+            await tasksService.taskDone(id)
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
 }
 
 

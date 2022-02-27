@@ -5,7 +5,8 @@ import { todosApi } from "./AxiosService.js"
 
 
 class TasksService {
-    deleteTask(id) {
+    async deleteTask(id) {
+        const res = await todosApi.delete('' + id)
         ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
     }
 
@@ -23,6 +24,15 @@ class TasksService {
         console.log('[getTasks]', res.data);
         //NOTE: go over map
         ProxyState.tasks = res.data.map(t => new Task(t))
+    }
+
+    async taskDone(id) {
+        let myTask = ProxyState.tasks.find(t => t.id == id)
+        myTask.completed = !myTask.completed
+        console.log(myTask);
+
+        const res = await todosApi.put()
+
     }
 
 }
