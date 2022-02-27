@@ -9,11 +9,19 @@ class TasksService {
         ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
     }
 
-    async createTask(newTask) {
-        const res = await todosApi.post('')
-        const task = new Task(newTask)
+    //NOTE: go over the taskData
+    async createTask(taskData) {
+        const res = await todosApi.post('', taskData)
+        const task = new Task(res.data)
         ProxyState.tasks = [...ProxyState.tasks, task]
         console.log(ProxyState.tasks)
+    }
+
+
+    async getTasks() {
+        const res = await todosApi.get()
+        console.log('[getTasks]', res.data);
+        ProxyState.tasks = [res.data.results, ...ProxyState.tasks]
     }
 
 }
