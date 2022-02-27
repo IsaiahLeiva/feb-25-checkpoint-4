@@ -30,9 +30,9 @@ class TasksService {
         let myTask = ProxyState.tasks.find(t => t.id == id)
         myTask.completed = !myTask.completed
         console.log(myTask);
-
-        const res = await todosApi.put()
-
+        //REVIEW: Ask about line below-As seen on gregslist
+        const res = await todosApi.put('' + id, myTask)
+        ProxyState.tasks = ProxyState.tasks
     }
 
 }
