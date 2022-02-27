@@ -7,7 +7,7 @@ class AppState extends EventEmitter {
 
   tasks = []
 
-  quotes = []
+  quotes = {}
 }
 
 export const ProxyState = new Proxy(new AppState(), {

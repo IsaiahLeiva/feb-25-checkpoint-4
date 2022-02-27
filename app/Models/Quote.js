@@ -1,18 +1,17 @@
 import { generateId } from "../Utils/generateId.js";
 
 
-export default class Quote {
+export class Quote {
     constructor(data) {
-        this.id = generateId()
+        this.id = data.id
         this.author = data.author
+        this.content = data.content
     }
 
-    get ActiveQuote() {
+    get Template() {
         return `
-        <div id="quotes" class="text-center">
-        <h3 class="fst-italic">"${this.quote}"</h3>
-        <h4>-${this.character}</h4>
-        </div>
+        <h3 class="fst-italic">${this.author}</h3>
+        <p>"${this.content}"</p>
         `
     }
 }
