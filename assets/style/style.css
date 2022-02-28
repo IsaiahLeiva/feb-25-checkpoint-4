@@ -4,7 +4,7 @@ body{
 }
 
 
-#quotes:hover + .hide{
+#author:hover + .hide{
         display: block;
         color: red;
 }
