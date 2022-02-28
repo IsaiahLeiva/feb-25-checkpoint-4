@@ -3,6 +3,9 @@ body{
     background-size: cover;
 }
 
+.hide{
+    display: none;
+}
 
 #author:hover + .hide{
         display: block;

@@ -10,8 +10,8 @@ export class Quote {
 
     get Template() {
         return `
-        <h3 id="author" class="fst-italic">${this.author}</h3>
-        <p id="hovertext" class="text-shadow">"${this.content}"</p>
+        <h3 id="author" class="fst-italic hide">${this.author}</h3>
+        <p id="hovertext" class="text-shadow author">"${this.content}"</p>
         `
     }
 }
