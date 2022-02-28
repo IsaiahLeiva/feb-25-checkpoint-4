@@ -7,7 +7,7 @@ body{
     display: none;
 }
 
-.author:hover + .hide{
+.wrapper:hover + .author{
         display: block;
         color: red;
 }
