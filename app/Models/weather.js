@@ -8,7 +8,7 @@ export class weather {
 
     get Template() {
         return `
-        <h1 class="">${this.toggle ? this.Fahrenheit : this.Celsius}</h1>
+        <h1 class="text-shadow">${this.toggle ? this.Fahrenheit : this.Celsius}</h1>
         <li>Fahrenheit: ${this.Fahrenheit}</li>
         <li>Celsius: ${this.Celsius}</li>
         <button onclick="app.weatherController.changeTemperature()">Change Temperature</button>
