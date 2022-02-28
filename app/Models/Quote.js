@@ -10,7 +10,7 @@ export class Quote {
 
     get Template() {
         return `
-        <h3 class="fst-italic">${this.author}</h3>
+        <h3 id="author" class="fst-italic">${this.author}</h3>
         <p id="hovertext" class="text-shadow">"${this.content}"</p>
         `
     }

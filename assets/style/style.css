@@ -2,3 +2,8 @@
 body{
     background-size: cover;
 }
+
+
+#author:hover .hide{
+    opacity: 1;
+}
