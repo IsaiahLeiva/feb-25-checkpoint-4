@@ -12,7 +12,7 @@ export class Task {
     get Template() {
         return `
         <div>
-        <input type="checkbox" ${this.completed ? 'checked' : ''} onclick="app.tasksController.taskDone('${this.id}')"><li class="d-flex text-shadow justify-content-between">${this.description} <i class="mdi mdi-plus" title="Delete ${this.description}" onclick="app.tasksController.deleteTask('${this.id}')"></i></li>
+        <input type="checkbox" ${this.completed ? 'checked' : ''} onclick="app.tasksController.taskDone('${this.id}')"><li class="d-flex text-shadow">${this.description} <i class="mdi mdi-delete" title="Delete ${this.description}" onclick="app.tasksController.deleteTask('${this.id}')"></i></li>
         </div>
         `
     }
