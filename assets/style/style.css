@@ -4,6 +4,7 @@ body{
 }
 
 
-#author:hover .hide{
-    opacity: 1;
+#quotes:hover + .hide{
+        display: block;
+        color: red;
 }
