@@ -10,7 +10,6 @@ class TasksService {
         ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
     }
 
-    //NOTE: go over the taskData
     async createTask(taskData) {
         const res = await todosApi.post('', taskData)
         const task = new Task(res.data)
@@ -22,7 +21,6 @@ class TasksService {
     async getTasks() {
         const res = await todosApi.get()
         console.log('[getTasks]', res.data);
-        //NOTE: go over map
         ProxyState.tasks = res.data.map(t => new Task(t))
     }
 
